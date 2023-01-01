@@ -27,7 +27,7 @@ def check_money(drink):
     if total < cost:
         print("Sorry, that's not enough money.")
     else:
-        change = total - cost
+        change = round(total - cost, 2)
         print(f"Here is ${change} in change")
         make_drink(drink)
 
