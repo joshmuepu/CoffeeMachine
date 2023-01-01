@@ -85,15 +85,22 @@ def make_drink(drink):
         print("Wrong selection")
 
 
-while turn_on:
-    user_choice = input("What would you like? (espresso/latte/cappuccino): ")
+def make_coffee():
+    global turn_on
+    turn_on = True
 
-    if user_choice == "off":
-        print("Good Bye!!")
-        turn_on = False
-    elif user_choice == "report":
-        report()
-    else:
-        check_money(user_choice)
+    while turn_on:
+        user_choice = input("What would you like? (espresso/latte/cappuccino): ")
+
+        if user_choice == "off":
+            print("Good Bye!!")
+            turn_on = False
+        elif user_choice == "report":
+            report()
+        else:
+            check_money(user_choice)
+
+
+make_coffee()
 
 
